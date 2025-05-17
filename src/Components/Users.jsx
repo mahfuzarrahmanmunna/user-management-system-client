@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const Users = () => {
     const initialUsers = useLoaderData();
-    const [users, setUsers] = useState(initialUsers)
+    const [users, setUsers] = useState(Array.isArray(initialUsers) ? initialUsers : []);
     // console.log(users);
 
     const handleDelete = (id) => {

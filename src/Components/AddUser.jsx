@@ -16,7 +16,7 @@ const AddUser = () => {
         alert(`Selected gender: ${active}`);
 
         // give the data into database here
-        fetch('http://localhost:3000/users', {
+        fetch('https://user-management-system-server-lac.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

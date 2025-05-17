@@ -21,13 +21,13 @@ export const router = createBrowserRouter([
             {
                 path: '/users',
                 Component: Users,
-                loader: () => fetch(`http://localhost:3000/users/`),
+                loader: () => fetch(`https://user-management-system-server-lac.vercel.app/users/`),
                 hydrateFallbackElement: <p>Loading...</p>
             },
             {
                 path: 'updated-user/:id',
                 Component: UpdateUser,
-                loader: ({ params }) => fetch(`http://localhost:3000/users/${params.id}`)
+                loader: ({ params }) => fetch(`https://user-management-system-server-lac.vercel.app/users/${params.id}`)
             }
         ]
     }
